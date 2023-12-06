@@ -1,0 +1,139 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+@width: 250px;
+@height: 150px;
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    height: 40%;
+    width: 100%;
+    border: dotted 1px black;
+    gap: 20px;
+}
+
+.bordered {
+    border: dotted 3px black;
+}
+
+.left {
+    width: @width;
+    height: @height;
+    background-color: red;
+    .bordered
+}
+
+.center {
+    width: @width;
+    height: @height;
+    background-color: orange;
+    text-align: center;
+    .bordered
+}
+
+.right {
+    width: @width;
+    height: @height;
+    background-color: yellow;
+    text-align: right;
+    .bordered
+}
+
+
+
+@media (max-width: 1450px) {
+    .wrap {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        height: 40%;
+        width: 60%;
+        border: dotted 1px black;
+        flex-direction: row;
+        align-content: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+
+    @width: 200px;
+    @height: 100px;
+
+    .left {
+        width: @width;
+        height: @height;
+        background-color: red;
+        .bordered
+    }
+
+    .center {
+        width: @width;
+        height: @height;
+        background-color: orange;
+        text-align: center;
+        .bordered
+    }
+
+    .right {
+        width: 430px;
+        height: 100px;
+        background-color: yellow;
+        text-align: right;
+        .bordered
+    }
+}
+
+@media (max-width: 768px) {
+    .wrap {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        height: 40%;
+        width: 80%;
+        border: dotted 1px black;
+        flex-direction: row-reverse;
+        align-content: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+        gap: 10px;
+    }
+
+    @width: 450px;
+    @height: 150px;
+
+    .left {
+        width: @width;
+        height: @height;
+        background-color: red;
+        .bordered
+    }
+
+    .center {
+        width: @width;
+        height: @height;
+        background-color: orange;
+        text-align: center;
+        .bordered
+    }
+
+    .right {
+        width: @width;
+        height: 50px;
+        background-color: yellow;
+        text-align: right;
+        .bordered
+    }
+}
